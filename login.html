@@ -1,0 +1,68 @@
+
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css"href="cssruth.css"/>
+    </head>
+    <body>
+      <center>
+        <div class="welcome">
+       <p> Welcome to EDU-online book libray<br/>
+   
+       <div class="account">
+        <button onclick="document.getElementById('id02').style.display='block'">Sign In</button>
+    
+    </center>
+</div>
+        <div id="id02" class="modal">
+            <form class="modal-content" action="index.html">
+              <div class="container">
+                <h1>login</h1>
+                <p>Please fill in this form if you already have an account.</p>
+                <hr>
+               
+                <label for="username"><b>username</b></label>
+                <input type="text" placeholder="Enter username" name="username" required>
+          
+          
+                <label for="psw"><b>password Password</b></label>
+                <input type="password" value="" id="myInput" required>
+          
+              <input type="checkbox" onclick="myFunction()">Show Password 
+          
+              <script>
+                function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+              x.type = "text";
+            } else {
+              x.type = "password";
+            }
+          } 
+              </script>
+          
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+                <button type="submit" class="login">login</button>
+              </div>
+            </form>
+          </div>
+          
+          <script>
+            // Get the modal
+            var modal = document.getElementById('id02');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            </script>
+            </form>
+           
+            
+    </body>
+</html>
+
+
