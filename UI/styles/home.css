@@ -1,0 +1,198 @@
+ body,
+ html {
+     height: 100%;
+     margin: 0;
+ }
+ 
+ body {
+     background-image: url('../images/wood.jpg');
+     height: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ .welcome-container {
+     width: 80%;
+     height: 330px;
+     background-image: url('../images/book.jpg');
+     border-radius: 20px;
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+     display: flex;
+     margin: 1% auto 20% auto;
+     position: fixed;
+     justify-content: space-evenly;
+     align-items: center;
+     left: 10%;
+ }
+ 
+ .welcome-text p:nth-child(1) {
+     color: #ffff;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: bold;
+     font-size: 50px;
+     line-height: 0px;
+     justify-content: center;
+ }
+ 
+ .welcome-text p:nth-child(2) {
+     color: #ffffff;
+     font-size: 45px;
+     font-family: lobster;
+     font-weight: lighter;
+     line-height: 30px;
+     justify-content: center;
+ }
+ 
+ .welcome-text p:nth-child(3) {
+     color: #ffffff;
+     font-family: lobster;
+     font-size: 30px;
+     line-height: 15px;
+     justify-content: center;
+     font-weight: lighter;
+ }
+ 
+ .login-container {
+     width: 80%;
+     height: 330px;
+     background-color: #ffffff;
+     border-radius: 20px;
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+     display: flex;
+     margin: 64% auto 20% auto;
+     position: fixed;
+     justify-content: space-evenly;
+     align-items: center;
+     left: 10%;
+ }
+ 
+ #boxes {
+     top: 0;
+ }
+ 
+ #boxes .box {
+     float: left;
+     width: 300px;
+     padding: 10px;
+     text-align: center;
+ }
+ 
+ .box1 {
+     width: 300px;
+     height: 210px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin-bottom: 20px;
+     margin-right: 50px;
+ }
+ 
+ .box2 {
+     width: 300px;
+     height: 210px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 20px;
+     flex-direction: column;
+     margin-left: 50px;
+ }
+ 
+ .box-container {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .box1 {
+     background-image: url('../images/admin.jpg');
+ }
+ 
+ .box2 {
+     background-image: url('../images/STUDENT.jpg');
+ }
+ 
+ .box1 button {
+     width: 100px;
+     height: 30px;
+     background-color: #ffffff;
+     border: none;
+     outline: none;
+     border-radius: 5px;
+     background-color: #b18d65;
+     color: darkblue;
+     margin-top: 180px;
+ }
+ 
+ .box2 button {
+     width: 100px;
+     height: 30px;
+     background-color: #ffffff;
+     border: none;
+     outline: none;
+     border-radius: 5px;
+     background-color: #b18d65;
+     margin-top: 180px;
+     color: darkblue;
+ }
+ 
+ .box1:hover {
+     transform: scaleX(1.1);
+ }
+ 
+ .box2:hover {
+     transform: scaleX(1.1);
+ }
+ /*
+    @media(max-width:100px) {
+        * {
+            box-sizing: border-box;
+        }
+        .welcome-container {
+            width: 80%;
+            border-radius: 20px;
+        }
+        .welcome-text {
+            width: 400px;
+        }
+        .login-container {
+            width: 80%;
+            border-radius: 20px;
+        }
+        #boxes {
+            padding: 2% 5% 0px 5%;
+            height: auto;
+        }
+        .box-container {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .box1,
+        .box2 {
+            flex-grow: 1;
+            margin: 10px;
+        }
+    }
+    
+    @media(max-width:750px) {
+        .welcome-text p:nth-child(2),
+        .welcome-text p:nth-child(3) {
+            line-height: 40px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .welcome-text {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+    }*/
