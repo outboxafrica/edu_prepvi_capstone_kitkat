@@ -1,0 +1,169 @@
+.banner-area {
+    background-image: url(./UI/images/wood.jpg);
+    background-position: center center;
+    background-size: cover;
+    /* height: 100vh; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 15px 60px;
+}
+
+.menu {
+    width: 42%;
+    float: right;
+    list-style: none;
+}
+
+.menu li {
+    display: inline;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    justify-content: space-evenly;
+}
+
+.menu li:hover {
+    background-color: yellow;
+}
+
+.menu li:hover a {
+    color: #000;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    left: 30px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px 0;
+    width: 20%;
+    float: left;
+}
+
+.banner-text {
+    max-width: 60vw;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    background: rgb(82, 82, 158);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.banner-text h2 {
+    font-family: baloo;
+    margin: 0;
+    font-size: 55px;
+    color: #b18d65;
+}
+
+.banner-text p {
+    font-size: 22px;
+    margin: 0;
+    font-family: poppins;
+}
+
+.banner-text a {
+    text-decoration: none;
+    border: 1px solid #fff;
+    font-size: 17px;
+    padding: 10px 35px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 5%;
+    font-family: poppins;
+    text-transform: uppercase;
+}
+
+.banner-text a:hover {
+    border-color: #b18d65;
+    background-color: #b18d65;
+    transition: .9s;
+    color: #262626;
+}
+
+header {
+    background-color: rgb(4, 4, 65);
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #b18d65 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dark {
+    padding: 15px;
+    background-color: #354240;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: #b18d65;
+    font-weight: bold;
+}
+
+.current a {
+    color: #b18d65;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+.banner-text{
+    margin: 15vh auto 0vh auto;
+}
+
+#branding,nav{
+    z-index: 100;
+}

@@ -36,7 +36,7 @@ if(!userExists){
     alert("ACCESS DENIED!!!")
 }
 else {
-    window.open("./books.html", "_self")
+    window.open("./landingpage.html", "_self")
 }
 } 
 // function loginUser (userId,password) {}
