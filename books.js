@@ -11,8 +11,7 @@ const switchBook = (book)=>{
     storedBooks = [...storedBooks.filter(bk => {return bk.isbn!==book.isbn}),book]
     
 }
-    // const style = document.querySelector("i");
-    //console.log(getComputedStyle(style).color);
+    
     class Book {
         constructor(title, author, category) {
             this.title = title;
