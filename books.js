@@ -1,22 +1,48 @@
+let rendered = false
 window.addEventListener("DOMContentLoaded", mainFn);
 
 function mainFn() {
+    let booksExist = sessionStorage.getItem ("storedBooks")
+    let storedBooks = [];
+    if (booksExist){
+         storedBooks = JSON.parse(sessionStorage.getItem ("storedBooks"));
+    }
+const switchBook = (book)=>{
+    storedBooks = [...storedBooks.filter(bk => {return bk.isbn!==book.isbn}),book]
+    
+}
     // const style = document.querySelector("i");
     //console.log(getComputedStyle(style).color);
     class Book {
-        constructor(title, author, isbn) {
+        constructor(title, author, category) {
             this.title = title;
             this.author = author;
-            this.isbn = isbn;
+            this.isbn = Math.floor(1000 + Math.random() * 9000);;
+            this.category = category;
+            this.borrowedBy = "";
+            this.borrowed = false;
+            this.available = true;
+            this.borrowThis = function (userId) {
+                this.borrowedBy = userId;
+                this.borrowed = true;
+                this.available = false;
+            }
+            this.returnThis = function () {
+                this.borrowedBy = "";
+                this.borrowed = false;
+                this.available = true;
+            }
         }
     }
     //end Book
     class UI {
         static addBook(book) {
-            const storedBooks = [
+           console.log("book is", book)
+           if (!storedBooks.includes(book)){
 
-            ];
-            storedBooks.push(book);
+               storedBooks.push(book);
+               sessionStorage.setItem("storedBooks", JSON.stringify(storedBooks))
+           }
             const books = storedBooks;
 
             const booklist = document.querySelector("#book-list");
@@ -26,6 +52,7 @@ function mainFn() {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.isbn}</td>
+        <td>${book.category}</td>
         <td><span class="delete close"> &times;</span></td>
         `;
                 booklist.appendChild(row);
@@ -55,45 +82,60 @@ function mainFn() {
 
     }
     //end UI
-
-    window.addEventListener("DOMContentLoaded", UI.addBook({
-        title: 'Understanding Mathematics',
+const defaultBooks = [
+    {   title: 'Understanding Mathematics',
         author: 'James Kater',
-        isbn: "121"
-    }));
-    window.addEventListener("DOMContentLoaded", UI.addBook({
-        title: 'Understanding Physics',
-        author: 'Bob Marley',
-        isbn: "122"
-    }));
-    window.addEventListener("DOMContentLoaded", UI.addBook({
+        category: 'Mathematics'
+    },
+    {
         title: 'Javascript for dummies',
         author: 'Ron Wesely',
-        isbn: "123"
-    }));
-    window.addEventListener("DOMContentLoaded", UI.addBook({
+        category: 'Programming'
+    },
+    {
         title: 'Trails',
         author: 'Peterson Nails',
-        isbn: "124"
-    }));
-    window.addEventListener("DOMContentLoaded", UI.addBook({
-        title: 'learning Process',
+        category: 'Fiction'
+    },{
+        title: 'Learning Process',
         author: 'Knowells Marknon',
-        isbn: "125"
-    }));
+        category: 'Mathematics'
+    }
+]
 
+const loadDefault = () =>{
+    if (rendered){
+        return
+    }
+    rendered = true 
+    if (!booksExist) {
+        console.log(101)
+        defaultBooks.forEach((book)=>{
+            let bk = new Book(book.title, book.author, book.category)
+            UI.addBook(bk)
+        })
+    }
+    else {
+        console.log(108)
+        storedBooks.forEach((book)=>{
+            let bk = new Book(book.title, book.author, book.category)
+            UI.addBook(bk)
+        })
+    }
+}
+    window.addEventListener("DOMContentLoaded", loadDefault());
 
     document.querySelector(".my-form").addEventListener("submit", (e) => {
         e.preventDefault();
 
         const title = document.querySelector("#title").value;
         const author = document.querySelector("#author").value;
-        const isbn = document.querySelector("#isbn").value;
+        const category = document.querySelector("#category").value;
 
-        if (title === '' || author === '' || isbn === '') {
+        if (title === '' || author === '' || category === '') {
             UI.showAlert("Please fill all fields", "danger");
         } else {
-            const book = new Book(title, author, isbn);
+            const book = new Book(title, author, category);
 
             UI.addBook(book);
 

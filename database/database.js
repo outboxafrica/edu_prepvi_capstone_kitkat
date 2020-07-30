@@ -17,6 +17,7 @@ const createUser = (userId,password,userType,emailId) => {
     sessionStorage.setItem("users",JSON.stringify(users))
     
 }
+/*
 const createBook = (bookName, category) => {
     let book = {
         bookId,
@@ -26,6 +27,8 @@ const createBook = (bookName, category) => {
     }
     books.push(book) 
 }
+// */
+
 // check if user exists in users array, if user exists naviagte to books else deny access
 const loginUser = (userId,password)=>{
 const userExists = users.find((user)=>user.userId===userId && user.password===password)
