@@ -20,19 +20,34 @@
         </div>
         <form id="login" class="input-group">
             <input type="text" class="input-field" placeholder="User Id" required>
-            <input type="text" class="input-field" placeholder="Enter Password" required>
-            <input type="checkbox" class="check-box"><span>Remember Password</span>
-            <button type="submit" class="submit-btn">Log In</button>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <button type="submit" class="submit-btn" id="loginBtn">Log In</button>
         </form>
+
         <form id="register" class="input-group">
             <input type="text" class="input-field" placeholder="User Id" required>
             <input type="email" class="input-field" placeholder="Email Id" required>
-            <input type="text" class="input-field" placeholder="Enter Password" required>
-            <input type="checkbox" class="check-box"><span>I agree to the terms & conditions </span>
-            <button type="submit" class="submit-btn">Register</button>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <div class="radio-container">
+                <div class="radio-field">
+                    <input type="radio" class="input-field" value="EDU student" name ="userType">
+                    <span> EDU Student</span>
+                </div>
+                <div class="radio-field">
+                <input type="radio" class="input-field" value="EDU LF" name ="userType" checked="true">
+                <span> EDU LF </span>
+                </div>
+
+                <div class="radio-field">
+                <input type="radio" class="input-field" value="EDU staff member" name ="userType">
+                <span>EDU Staff Member </span>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn" id="registerUsers">Register</button>
         </form>
     </div>
     </div>
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="database/database.js"></script>
 </body>
 </html>
