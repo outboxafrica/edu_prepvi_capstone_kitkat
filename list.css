@@ -1,0 +1,40 @@
+body {
+    background-image: url('./UI/images/wood.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 8px rgba(233, 144, 2, 0.8);
+    border: 1px solid rgb(233, 144, 2);
+}
+
+.close {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.close:hover {
+    color: rgb(233, 144, 2);
+}
+
+th {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#book-list {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #000000;
+}
+
+td {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #000000;
+}
