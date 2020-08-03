@@ -62,7 +62,7 @@ header {
     justify-content: center;
     align-items: center;
     
-    background: rgb(82, 82, 158);
+    background: rgb(158, 27, 4);
     padding: 25px;
     border-radius: 10px;
 }
@@ -100,15 +100,16 @@ header {
 }
 
 header {
-    background-color: rgb(4, 4, 65);
+    /* background-color: rgb(4, 4, 65); */
+    box-shadow: 2px 3px 4px 2px rgb(13, 13, 14, 0.2);
     color: #ffffff;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #b18d65 3px solid;
+    /* border-bottom: #b18d65 3px solid; */
 }
 
 header a {
-    color: #ffffff;
+    color: tomato;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -156,7 +157,7 @@ header nav {
 }
 
 header a:hover {
-    color: #eeeeee;
+    color: rgb(221, 46, 15);
     font-weight: bold;
 }
 
@@ -166,4 +167,7 @@ header a:hover {
 
 #branding,nav{
     z-index: 100;
+}
+#landinglogo span{
+    margin-right: 0.5rem;
 }

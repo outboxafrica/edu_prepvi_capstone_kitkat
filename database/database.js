@@ -54,6 +54,8 @@ const onRegister = event => {
     // console.log(userType.value)
     createUser(userId,password,userType,emailId) 
     alert ( "Registration Successful") 
+    login()
+    // document.getElementById("logg").click()
 }
 document.getElementById("register").addEventListener("submit",onRegister)
 
